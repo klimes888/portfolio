@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 
 import Admin from "@/assets/images/main.png";
+import V from "@/assets/images/V.png";
 import { projects } from "@/datas/works";
 
 const GOOGLE_FORM_URL =
@@ -181,6 +182,7 @@ export default function Portfolio() {
                   width={600}
                   height={400}
                 />
+                <FingerImage src={V} alt="Hero V" width={200} height={200} />
                 <HeroImageBlur src={Admin} alt="Portfolio Hero" />
                 <ImageOverlay />
               </HeroImageWrapper>
@@ -223,15 +225,14 @@ export default function Portfolio() {
           >
             <SectionTitle>
               <TitleSpan gradient="linear-gradient(45deg, #ffffff, #d1d5db)">
-                Featured
+                WEB / APP
               </TitleSpan>{" "}
               <TitleSpan gradient="linear-gradient(45deg, #14b8a6, #3b82f6)">
-                Projects
+                프로젝트
               </TitleSpan>
             </SectionTitle>
             <SectionDescription>
-              A collection of projects that showcase my skills and passion for
-              creating exceptional digital experiences.
+              {`프론트 / 서버 / 인프라 모든 분야에서 개발하고 활동해왔습니다\n최고의 사용자 경험과 유저를 위한 코드를 설계합니다`}
             </SectionDescription>
           </SectionHeader>
 
@@ -313,14 +314,17 @@ export default function Portfolio() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <FooterTitle>Let's Create Something Amazing Together</FooterTitle>
+            <FooterTitle>부담 없이 문의 주세요</FooterTitle>
             <FooterDescription>
-              Ready to bring your ideas to life? Let's connect and discuss your
-              next project.
+              재미로 하는 프리랜서 일이라 딱딱하지 않게 서로 부담 없이
+              얘기했으면 좋겠습니다😎
             </FooterDescription>
-            <Button className="bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white px-8 py-3 mx-auto">
-              <Mail className="w-4 h-4 mr-2" />
-              Get In Touch
+            <Button
+              className="bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white px-8 py-3 mx-auto"
+              onClick={() => outterLink(GOOGLE_FORM_URL)}
+            >
+              <Mail className="w-4 h-4 mr-1" />
+              문의하기
             </Button>
           </FooterContent>
         </FooterContainer>
@@ -498,6 +502,7 @@ const HeroImageWrapper = styled.div`
   backdrop-filter: blur(16px);
   border-radius: 1.5rem;
   padding: 2rem;
+  overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.2);
 `;
 
@@ -512,10 +517,22 @@ const HeroImageBlur = styled(Image)`
   filter: blur(1em);
   opacity: 0.65;
   z-index: -1;
+  margin-left: 1em;
 `;
 
 const HeroImage = styled(Image)`
   width: 100%;
+  height: auto;
+  z-index: 9;
+  margin-left: 1em;
+`;
+
+const FingerImage = styled(Image)`
+  position: absolute;
+  bottom: 2em;
+  left: 0.75em;
+  width: 25%;
+  filter: brightness(0.95);
   height: auto;
   z-index: 9;
 `;
@@ -564,6 +581,7 @@ const SectionTitle = styled.h2`
 `;
 
 const SectionDescription = styled.p`
+  white-space: pre-wrap;
   font-size: 1.25rem;
   color: #d1d5db;
   max-width: 32rem;
