@@ -385,6 +385,11 @@ const NavContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem 1rem;
+  }
 `;
 
 const Logo = styled(motion.div)`
@@ -394,6 +399,9 @@ const Logo = styled(motion.div)`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  @media (max-width: 768px) {
+    margin-bottom: 0.25em;
+  }
 `;
 
 const NavActions = styled.div`
@@ -438,7 +446,7 @@ const HeroTextContainer = styled.div`
 `;
 
 const HeroTitle = styled(motion.h1)`
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: bold;
   line-height: 1.1;
 
@@ -455,9 +463,12 @@ const TitleSpan = styled.span<{ gradient: string }>`
 `;
 
 const HeroDescription = styled(motion.p)`
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #d1d5db;
   line-height: 1.6;
+  @media (min-width: 1024px) {
+    font-size: 1.25rem;
+  }
 `;
 
 const SkillsContainer = styled(motion.div)`
@@ -571,7 +582,7 @@ const SectionHeader = styled(motion.div)`
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
 
@@ -582,10 +593,13 @@ const SectionTitle = styled.h2`
 
 const SectionDescription = styled.p`
   white-space: pre-wrap;
-  font-size: 1.25rem;
+  font-size: 0.9rem;
   color: #d1d5db;
   max-width: 32rem;
   margin: 0 auto;
+  @media (min-width: 1024px) {
+    font-size: 1.25rem;
+  }
 `;
 
 const ProjectsGrid = styled.div`
