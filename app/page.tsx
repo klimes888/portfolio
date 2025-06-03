@@ -18,6 +18,7 @@ import {
   Palette,
   Smartphone,
   Globe,
+  Calculator,
 } from "lucide-react";
 
 import Admin from "@/assets/images/main.png";
@@ -26,6 +27,8 @@ import { projects } from "@/datas/works";
 
 const GOOGLE_FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSdEZ7k4828sw2gvFr--kwhRJwIN5nxPKo3EtJOae4Z-JMXuZg/viewform?usp=dialog";
+
+const KAKAO_INQUIRE = "https://open.kakao.com/o/sK7wwNzh";
 
 const GITHUB_URL = "https://github.com/klimes888";
 const X_URL = "https://x.com/kim_taehee33768";
@@ -96,10 +99,17 @@ export default function Portfolio() {
               </Button>
               <Button
                 className="bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600"
-                onClick={() => outterLink(GOOGLE_FORM_URL)}
+                onClick={() => outterLink(KAKAO_INQUIRE)}
               >
                 <Mail className="w-4 h-4 mr-1" />
-                문의하기
+                문의
+              </Button>
+              <Button
+                className="bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600"
+                onClick={() => outterLink(GOOGLE_FORM_URL)}
+              >
+                <Calculator className="w-4 h-4 mr-1" />
+                견적
               </Button>
             </NavActions>
           </NavContent>
@@ -321,7 +331,7 @@ export default function Portfolio() {
             </FooterDescription>
             <Button
               className="bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white px-8 py-3 mx-auto"
-              onClick={() => outterLink(GOOGLE_FORM_URL)}
+              onClick={() => outterLink(KAKAO_INQUIRE)}
             >
               <Mail className="w-4 h-4 mr-1" />
               문의하기
