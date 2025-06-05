@@ -4,6 +4,7 @@ import TheSsencard from "@/assets/images/thessencard.jpg";
 import Hatch from "@/assets/images/hatch-3d.png";
 import Pantasia from "@/assets/images/pantasia.png";
 import Hitthepic from "@/assets/images/hitthepic.png";
+import Attack from "@/assets/images/attack-on-titan.png";
 
 export const projects = [
   {
@@ -45,7 +46,7 @@ export const projects = [
     tags: ["Next.js", "Notion", "AWS"],
     github: "#",
     live: "https://www.hitthepic.com/",
-    category: "Landing page",
+    category: "Landing Page",
   },
   {
     id: 5,
@@ -57,5 +58,15 @@ export const projects = [
     github: "https://github.com/klimes888/theworld_front",
     live: "https://www.pantasia.live/",
     category: "Web Development",
+  },
+  {
+    id: 6,
+    title: "진격의 거인 소개 페이지",
+    description: "진격의 거인을 테마로 한 소개 페이지 [랜딩페이지]",
+    image: Attack,
+    tags: ["Next.js", "Typescript", "Netlify"],
+    github: "https://github.com/klimes888/attack-on-titan-landing",
+    live: "https://incredible-manatee-b80dd6.netlify.app/",
+    category: "Landing Page",
   },
 ];
