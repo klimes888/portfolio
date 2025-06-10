@@ -5,6 +5,7 @@ import Hatch from "@/assets/images/hatch-3d.png";
 import Pantasia from "@/assets/images/pantasia.png";
 import Hitthepic from "@/assets/images/hitthepic.png";
 import Attack from "@/assets/images/attack-on-titan.png";
+import Blue from "@/assets/images/blue_archive.png";
 
 export const projects = [
   {
@@ -67,6 +68,16 @@ export const projects = [
     tags: ["Next.js", "Typescript", "Netlify"],
     github: "https://github.com/klimes888/attack-on-titan-landing",
     live: "https://incredible-manatee-b80dd6.netlify.app/",
+    category: "Landing Page",
+  },
+  {
+    id: 7,
+    title: "블루아카이브 팬북 페이지",
+    description: "랜딩페이지 기반 팬북 형태의 페이지",
+    image: Blue,
+    tags: ["Next.js", "Typescript", "CloudFlare"],
+    github: "https://github.com/klimes888/blue_archive_landing",
+    live: "https://blue-archive-pub.pages.dev",
     category: "Landing Page",
   },
 ];
